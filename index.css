@@ -25,7 +25,7 @@ body {
 }
 
     #banner .banner-text {
-        background: linear-gradient(269deg,rgba(255, 255, 255, 1) 0%, rgba(90, 104, 209, 1) 53%, rgba(245, 247, 247, 1) 100%);
+        background: linear-gradient(90deg,rgba(181, 5, 172, 1) 18%, rgba(108, 108, 204, 1) 94%);
         background-clip: text;
         color: transparent;
     }
