@@ -144,12 +144,18 @@
             <div class="card mx-md-auto mx-3 mt-4" style="max-width: 600px;">
                 <img id="imgCard" class="card-img-top">
                 <div class="card-body">
+                    <hr>
                     <span id="stackCard" class="d-flex gap-1"></span>
                     <h5 id="tituloCard" class="card-title mt-3"></h5>
                     <p id="descricaoCard" class="card-text"></p>
                     <button href="#" class="btn btn-primary">Ver projeto</button>
                     <a href="#" class="btn btn-dark">Repositório</a>
                 </div>
+            </div>
+
+            <div class="d-flex justify-content-center mt-3 gap-1">
+                <button id="btnPrimeiroCard" class="btn btn-primary">Projeto 1</button>
+                <button id="btnSegundoCard" class="btn btn-primary">Projeto 2</button>
             </div>
 
         </section>
@@ -227,29 +233,77 @@
 
             ],
             descricao: `O  Sistema Controle de Medicamentos, tem como objetivo gerenciar o que seria a farmacia de uma possível posto de saúde.
-            Tendo como suas funções, a gestão de estoque de medicamentos,o cadastro de pacientes, fornecedores, medicamentos. Entrada de medicamentos conforme solicitações,
-            adição e exclusao de estoque, o controle de prescrições médicas e a saída de acordo as prescrições recebidas.`
+                Tendo como suas funções, a gestão de estoque de medicamentos,o cadastro de pacientes, fornecedores, medicamentos. Entrada de medicamentos conforme solicitações,
+                adição e exclusao de estoque, o controle de prescrições médicas e a saída de acordo as prescrições recebidas.`
         };
 
-        function main() {
+        const dadosGestaoDeEquipamentos = {
+            titulo: 'Gestão de Equipamentos',
+            imagen: './imagens/gestaoEquipamentos.png',
+            stack: [
+                'https://skillicons.dev/icons?i=html&theme=light',
+                'https://skillicons.dev/icons?i=css&theme=light',
+                'https://skillicons.dev/icons?i=net&theme=light',
+                'https://skillicons.dev/icons?i=cs&theme=light'
+
+            ],
+            descricao: `O  Sistema Gestão de equipamentos, tem como objetivo o cadastro de equipamentos, onde o usuário pode cadastrar,
+            visualisar equipamentos cadastrados, editar cadastro de equipamentos e excluir equipamentos cadastrados. 
+            O sistema também permite a gestao de manutenção de equipamentos, permitindo que o usuário cadastre, visualize, edite e 
+            exclua chamadas de manutenção cadastradas na opção Manutenção.`
+        }
+
+        let cardSelecionado;
+
+        function carregarDadosCardAtual() {
+            if (!cardSelecionado)
+                throw new Error('Card não Selecionado.')
+
             const imgCard = document.getElementById('imgCard')
             const stackCrd = document.getElementById('stackCard')
             const tituloCard = document.getElementById('tituloCard')
             const descricaoCard = document.getElementById('descricaoCard')
 
-            imgCard.src = dadosCardControleDeMedicamento.imagen;
-            tituloCard.textContent = dadosCardControleDeMedicamento.titulo;
-            descricaoCard.textContent = dadosCardControleDeMedicamento.descricao;
+            const btnPrimeiroCard = document.getElementById('btnPrimeiroCard');
+            const btnSegundoCard = document.getElementById('btnSegundoCard');
+
+            imgCard.src = cardSelecionado.imagen;
+            tituloCard.textContent = cardSelecionado.titulo;
+            descricaoCard.textContent = cardSelecionado.descricao;
 
             stackCrd.innerHTML = '';
 
-            for (let item of dadosCardControleDeMedicamento.stack) {
+            for (let item of cardSelecionado.stack) {
                 const iconeStack = document.createElement('img')
                 iconeStack.width = 35;
                 iconeStack.src = item;
 
                 stackCrd.appendChild(iconeStack);
             }
+        }
+
+        function selecionarPrimeiroCard() {
+            if (cardSelecionado == dadosCardControleDeMedicamento)
+                return;
+
+            cardSelecionado = dadosCardControleDeMedicamento;
+            carregarDadosCardAtual();
+        }
+
+        function selecionarSegundoCard() {
+            if (cardSelecionado == dadosGestaoDeEquipamentos)
+                return;
+
+            cardSelecionado = dadosGestaoDeEquipamentos;
+            carregarDadosCardAtual();
+        }
+
+
+        function main() {       
+            btnPrimeiroCard.addEventListener('click', selecionarPrimeiroCard);
+            btnSegundoCard.addEventListener('click', selecionarSegundoCard);
+
+            selecionarPrimeiroCard();
         };
 
         document.addEventListener('DOMContentLoaded', main)
