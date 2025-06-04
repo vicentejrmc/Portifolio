@@ -10,7 +10,7 @@ const dadosCardControleDeMedicamento = {
         'https://skillicons.dev/icons?i=cs&theme=light'
 
     ],
-    descricao: `O  Sistema Controle de Medicamentos, tem como objetivo gerenciar o que seria a farmacia de uma possível posto de saúde.
+    descricao: `O Sistema Controle de Medicamentos, tem como objetivo gerenciar o que seria a farmacia de uma possível posto de saúde.
     Tendo como suas funções, a gestão de estoque de medicamentos,o cadastro de pacientes, fornecedores, medicamentos. Entrada de medicamentos conforme solicitações,
     adição e exclusao de estoque, o controle de prescrições médicas e a saída de acordo as prescrições recebidas.`
 };
@@ -82,14 +82,14 @@ function abrirModalProjeto() {
 }
 
 function main() {
-    const btnSelecionarPrimeiroCard = document.getElementById("btnSelecionarPrimeiroCard");
-    const btnSelecionarSegundoCard = document.getElementById("btnSelecionarSegundoCard");
+    const btnPrimeiroCard = document.getElementById("btnSelecionarPrimeiroCard");
+    /*const btnSegundoCard = document.getElementById("btnSelecionarSegundoCard");*/
     const btnVerProjeto = document.getElementById("btnVerProjeto")
 
 
     btnPrimeiroCard.addEventListener('click', selecionarPrimeiroCard);
-    btnSegundoCard.addEventListener('click', selecionarSegundoCard);
-    btnVerProjeto.addEventListener('click', abirModalProjeto);
+    /*btnSegundoCard.addEventListener('click', selecionarSegundoCard);*/
+    btnVerProjeto.addEventListener('click', abrirModalProjeto);
     selecionarPrimeiroCard();
 };
 
