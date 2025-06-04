@@ -76,8 +76,8 @@
                     </p>
 
                     <!--<p>
-                        Tamb m tenho experi ncia com bancos de dados <strong>SQL</strong> (SQL Server, MySQL, Postgres, SQLite) e <strong>NoSQL</strong> (MongoDB)... al m de experi ncia com aspectos de DevOps como <strong>GitHub Workflows</strong> e <strong>Docker</strong>.
-                    </p>-->
+                    Tamb m tenho experi ncia com bancos de dados <strong>SQL</strong> (SQL Server, MySQL, Postgres, SQLite) e <strong>NoSQL</strong> (MongoDB)... al m de experi ncia com aspectos de DevOps como <strong>GitHub Workflows</strong> e <strong>Docker</strong>.
+                </p>-->
                 </div>
             </article>
 
@@ -131,31 +131,33 @@
             </div>
         </section>
 
-        <section id="Portifolio" class="rounded-4 mt-3 px-3 py-4 text-white">
+        <section id="portfolio" class="rounded-4 mt-3 px-3 py-4 text-white">
 
-            <span class="fw-bold fs-1 mt-5 ps-3">Portifolio</span>
+            <span class="fw-bold fs-1 mt-5 ps-3">Portfólio</span>
 
             <p class="fs-5 mt-3 ps-3">
-                Nesta sessão, você poderá ver demonstrações um pouco mais detalhadas sobre os projetos nos quais já trabalhei,
-                bem como as suas funcionalidades. Demonstrando a aplicação de algumas das tecnologias das quais tenho conhecimento,
-                conforme mencionadas na sessão anterior.
+                Nesta seção, apresento os projetos dos quais participei e que demonstram as minhas habilidades como desenvolvedor. Ao clicar em cada card, um modal será exibido, proporcionando uma visualização detalhada do funcionamento de cada projeto. Cada trabalho represneta uma fase do meu aprendizado!
             </p>
 
-            <div class="card mx-md-auto mx-3 mt-4" style="max-width: 600px;">
-                <img id="imgCard" class="card-img-top">
-                <div class="card-body">
-                    <hr>
+            <div class="card mx-md-auto rounded-4 mx-3 mt-4" style="max-width: 600px;" data-bs-theme="white">
+                <img id="imgCard" class="card-img-top rounded-top-4">
+                <div class="card-body d-flex flex-column gap-2">
                     <span id="stackCard" class="d-flex gap-1"></span>
-                    <h5 id="tituloCard" class="card-title mt-3"></h5>
+                    <h5 id="tituloCard" class="card-title mt-2"></h5>
                     <p id="descricaoCard" class="card-text"></p>
-                    <button href="#" class="btn btn-primary">Ver projeto</button>
-                    <a href="#" class="btn btn-dark">Repositório</a>
+                    <div class="">
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#portfolioModal" id="btnVerProjeto">
+                            Ver projeto
+                        </button>
+                        <a id="urlRepositorio" class="btn btn-outline-light">Repositório</a>
+                    </div>
+
                 </div>
             </div>
 
-            <div class="d-flex justify-content-center mt-3 gap-1">
-                <button id="btnPrimeiroCard" class="btn btn-primary">Projeto 1</button>
-                <button id="btnSegundoCard" class="btn btn-primary">Projeto 2</button>
+            <div class="d-flex justify-content-center mt-3 flex-wrap gap-2">
+                <button id="btnSelecionarPrimeiroCard" class="btn btn-primary" style="width: 240px;">Controle de Medicamentos</button>
+                <!--<button id="btnSelecionarSegundoCard" class="btn btn-primary" style="width: 240px;">Gestão de Equipamentos</button>-->
             </div>
 
         </section>
@@ -219,95 +221,21 @@
 
     </main>
 
+    <div class="modal fade" id="portfolioModal" tabindex="-1" aria-labelledby="portfolioModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-md">
+            <div class="modal-content bg-dark rounded-4 text-white">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="portfolioModalLabel"></h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                </div>
+                <div class="modal-body rounded-bottom-4 modal-body-customizado text-center">
+                    <img id="portfolioModalImage" src="" alt="Imagem do Projeto" class="img-fluid mb-3" />
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
-    <!--<script charset="utf-8" src="./index.js"></script>-->
-    <script>
-        const dadosCardControleDeMedicamento = {
-            titulo: 'Controle de Medicamentos',
-            imagen: './imagens/CMed.png',
-            stack: [
-                'https://skillicons.dev/icons?i=html&theme=light',
-                'https://skillicons.dev/icons?i=css&theme=light',
-                'https://skillicons.dev/icons?i=net&theme=light',
-                'https://skillicons.dev/icons?i=cs&theme=light'
-
-            ],
-            descricao: `O  Sistema Controle de Medicamentos, tem como objetivo gerenciar o que seria a farmacia de uma possível posto de saúde.
-                Tendo como suas funções, a gestão de estoque de medicamentos,o cadastro de pacientes, fornecedores, medicamentos. Entrada de medicamentos conforme solicitações,
-                adição e exclusao de estoque, o controle de prescrições médicas e a saída de acordo as prescrições recebidas.`
-        };
-
-        const dadosGestaoDeEquipamentos = {
-            titulo: 'Gestão de Equipamentos',
-            imagen: './imagens/gestaoEquipamentos.png',
-            stack: [
-                'https://skillicons.dev/icons?i=html&theme=light',
-                'https://skillicons.dev/icons?i=css&theme=light',
-                'https://skillicons.dev/icons?i=net&theme=light',
-                'https://skillicons.dev/icons?i=cs&theme=light'
-
-            ],
-            descricao: `O  Sistema Gestão de equipamentos, tem como objetivo o cadastro de equipamentos, onde o usuário pode cadastrar,
-            visualisar equipamentos cadastrados, editar cadastro de equipamentos e excluir equipamentos cadastrados. 
-            O sistema também permite a gestao de manutenção de equipamentos, permitindo que o usuário cadastre, visualize, edite e 
-            exclua chamadas de manutenção cadastradas na opção Manutenção.`
-        }
-
-        let cardSelecionado;
-
-        function carregarDadosCardAtual() {
-            if (!cardSelecionado)
-                throw new Error('Card não Selecionado.')
-
-            const imgCard = document.getElementById('imgCard')
-            const stackCrd = document.getElementById('stackCard')
-            const tituloCard = document.getElementById('tituloCard')
-            const descricaoCard = document.getElementById('descricaoCard')
-
-            const btnPrimeiroCard = document.getElementById('btnPrimeiroCard');
-            const btnSegundoCard = document.getElementById('btnSegundoCard');
-
-            imgCard.src = cardSelecionado.imagen;
-            tituloCard.textContent = cardSelecionado.titulo;
-            descricaoCard.textContent = cardSelecionado.descricao;
-
-            stackCrd.innerHTML = '';
-
-            for (let item of cardSelecionado.stack) {
-                const iconeStack = document.createElement('img')
-                iconeStack.width = 35;
-                iconeStack.src = item;
-
-                stackCrd.appendChild(iconeStack);
-            }
-        }
-
-        function selecionarPrimeiroCard() {
-            if (cardSelecionado == dadosCardControleDeMedicamento)
-                return;
-
-            cardSelecionado = dadosCardControleDeMedicamento;
-            carregarDadosCardAtual();
-        }
-
-        function selecionarSegundoCard() {
-            if (cardSelecionado == dadosGestaoDeEquipamentos)
-                return;
-
-            cardSelecionado = dadosGestaoDeEquipamentos;
-            carregarDadosCardAtual();
-        }
-
-
-        function main() {       
-            btnPrimeiroCard.addEventListener('click', selecionarPrimeiroCard);
-            btnSegundoCard.addEventListener('click', selecionarSegundoCard);
-
-            selecionarPrimeiroCard();
-        };
-
-        document.addEventListener('DOMContentLoaded', main)
-    </script>
+    <script charset="utf-8" src="./index.js"></script>
 </body>
-
 </html>
