@@ -7,6 +7,15 @@ body {
     background-color: #00003D;
 }
 
+a:hover {
+    color: #924dae;
+}
+
+.link-externo {
+    color: 0b5ed7;
+    text-decoration: none;
+}
+
 #app {
     margin: auto;
     max-width: 1000px;
