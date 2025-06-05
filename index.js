@@ -10,13 +10,13 @@ const dadosCardControleDeMedicamento = {
         'https://skillicons.dev/icons?i=cs&theme=light'
 
     ],
-    descricao: `O Sistema Controle de Medicamentos, tem como objetivo gerenciar o que seria a farmacia de uma possível posto de saúde.
-    Tendo como suas funções, a gestão de estoque de medicamentos,o cadastro de pacientes, fornecedores, medicamentos. Entrada de medicamentos conforme solicitações,
-    adição e exclusao de estoque, o controle de prescrições médicas e a saída de acordo as prescrições recebidas.`
+    descricao: `O Sistema Controle de Medicamentos, tem como objetivo gerenciar o que seria a farmacia de uma possÃ­vel posto de saÃºde.
+    Tendo como suas funcionlidades, a gestÃ£o de estoque de medicamentos,o cadastro de pacientes, fornecedores, medicamentos. Entrada de medicamentos conforme solicitaÃ§Ãµes,
+    adiÃ§Ã£o e exclusao de estoque, o controle de prescriÃ§Ãµes mÃ©dicas e a saÃ­da de acordo as prescriÃ§Ãµes recebidas.`
 };
 
 const dadosGestaoDeEquipamentos = {
-    titulo: 'Gestão de Equipamentos',
+    titulo: 'Gestï¿½o de Equipamentos',
     imagem: './imagens/gestaoEquipamentos.png',
     gif: '',
     stack: [
@@ -26,17 +26,17 @@ const dadosGestaoDeEquipamentos = {
         'https://skillicons.dev/icons?i=cs&theme=light'
 
     ],
-    descricao: `O  Sistema Gestão de equipamentos, tem como objetivo o cadastro de equipamentos, onde o usuário pode cadastrar,
+    descricao: `O  Sistema Gestï¿½o de equipamentos, tem como objetivo o cadastro de equipamentos, onde o usuï¿½rio pode cadastrar,
             visualisar equipamentos cadastrados, editar cadastro de equipamentos e excluir equipamentos cadastrados. 
-            O sistema também permite a gestao de manutenção de equipamentos, permitindo que o usuário cadastre, visualize, edite e 
-            exclua chamadas de manutenção cadastradas na opção Manutenção.`
+            O sistema tambï¿½m permite a gestao de manutenï¿½ï¿½o de equipamentos, permitindo que o usuï¿½rio cadastre, visualize, edite e 
+            exclua chamadas de manutenï¿½ï¿½o cadastradas na opï¿½ï¿½o Manutenï¿½ï¿½o.`
 }
 
 let cardSelecionado;
 
 function carregarDadosCardAtual() {
     if (!cardSelecionado)
-        throw new Error('Card não Selecionado.')
+        throw new Error('Card nï¿½o Selecionado.')
 
     const imgCard = document.getElementById('imgCard')
     const stackCrd = document.getElementById('stackCard')
