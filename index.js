@@ -1,7 +1,7 @@
 
 const dadosCardControleDeMedicamento = {
     titulo: 'Controle de Medicamentos',
-    imagem: './imagens/controleDeMedicamentos.png',
+    imagem: './imagens/controle-de-medicamentos.png',
     gif: 'https://i.imgur.com/fgekUo6.gif',
     stack: [
         'https://skillicons.dev/icons?i=html&theme=light',
@@ -12,13 +12,14 @@ const dadosCardControleDeMedicamento = {
     ],
     descricao: `O Sistema Controle de Medicamentos, tem como objetivo gerenciar o que seria a farmacia de uma possível posto de saúde.
     Tendo como suas funcionlidades, a gestão de estoque de medicamentos,o cadastro de pacientes, fornecedores, medicamentos. Entrada de medicamentos conforme solicitações,
-    adição e exclusao de estoque, o controle de prescrições médicas e a saída de acordo as prescrições recebidas.`
+    adição e exclusao de estoque, o controle de prescrições médicas e a saída de acordo as prescrições recebidas.`,
+    urlRepositorio: 'https://github.com/vicentejrmc/controle-de-medicamentos'
 };
 
 const dadosGestaoDeEquipamentos = {
-    titulo: 'Gest�o de Equipamentos',
-    imagem: './imagens/gestaoEquipamentos.png',
-    gif: '',
+    titulo: 'Gestão de Equipamentos',
+    imagem: './imagens/gestao-de-equipamentos.png',
+    gif: 'https://i.imgur.com/3od2Ro2.gif',
     stack: [
         'https://skillicons.dev/icons?i=html&theme=light',
         'https://skillicons.dev/icons?i=css&theme=light',
@@ -26,17 +27,18 @@ const dadosGestaoDeEquipamentos = {
         'https://skillicons.dev/icons?i=cs&theme=light'
 
     ],
-    descricao: `O  Sistema Gest�o de equipamentos, tem como objetivo o cadastro de equipamentos, onde o usu�rio pode cadastrar,
+    descricao: `O  Sistema Gestão de equipamentos, tem como objetivo o cadastro de equipamentos, onde o usuário pode cadastrar,
             visualisar equipamentos cadastrados, editar cadastro de equipamentos e excluir equipamentos cadastrados. 
-            O sistema tamb�m permite a gestao de manuten��o de equipamentos, permitindo que o usu�rio cadastre, visualize, edite e 
-            exclua chamadas de manuten��o cadastradas na op��o Manuten��o.`
+            O sistema também permite que se realize chamados de manutenção de equipamentos, permitindo que o usuário cadastre, visualize, edite e 
+            exclua chamadas de manutenção cadastradas.`,
+    urlRepositorio: 'https://github.com/vicentejrmc/GestaoDeEquipamentos2025'
 }
 
 let cardSelecionado;
 
 function carregarDadosCardAtual() {
     if (!cardSelecionado)
-        throw new Error('Card n�o Selecionado.')
+        throw new Error('Card não Selecionado.')
 
     const imgCard = document.getElementById('imgCard')
     const stackCrd = document.getElementById('stackCard')
@@ -83,12 +85,12 @@ function abrirModalProjeto() {
 
 function main() {
     const btnPrimeiroCard = document.getElementById("btnSelecionarPrimeiroCard");
-    /*const btnSegundoCard = document.getElementById("btnSelecionarSegundoCard");*/
+    const btnSegundoCard = document.getElementById("btnSelecionarSegundoCard");
     const btnVerProjeto = document.getElementById("btnVerProjeto")
 
 
     btnPrimeiroCard.addEventListener('click', selecionarPrimeiroCard);
-    /*btnSegundoCard.addEventListener('click', selecionarSegundoCard);*/
+    btnSegundoCard.addEventListener('click', selecionarSegundoCard);
     btnVerProjeto.addEventListener('click', abrirModalProjeto);
     selecionarPrimeiroCard();
 };
