@@ -34,6 +34,22 @@ const dadosGestaoDeEquipamentos = {
     urlRepositorio: 'https://github.com/vicentejrmc/GestaoDeEquipamentos2025'
 }
 
+const dadosCardControleDeBar = {
+    titulo: 'Controle de Bar',
+    imagem: './imagens/controle-de-bar.png',
+    gif: 'https://imgur.com/baheGyf',
+    stack: [
+        'https://skillicons.dev/icons?i=html&theme=light',
+        'https://skillicons.dev/icons?i=css&theme=light',
+        'https://skillicons.dev/icons?i=net&theme=light',
+        'https://skillicons.dev/icons?i=cs&theme=light',
+        'https://skillicons.dev/icons?i=bootstrap&theme=light'
+    ],
+    descricao: 'O Sistema Controle de bar tem como objetivo de auxiliar de forma simples o gerenciamento do atendimento ao cliente. Com uma Inteface amigável e intuitiva, o sistema é ideal para estabelecimentos de pequeno porte. Por meio dele é possível realizar o Controle de vendas gerenciando os pedidos, Cadastro de produtos, Garsons e Mesas.'
+
+    urlRepositorio: 'https://github.com/vicentejrmc/Controle-de-bar2025'
+}
+
 let cardSelecionado;
 
 function carregarDadosCardAtual() {
@@ -78,6 +94,14 @@ function selecionarSegundoCard() {
     carregarDadosCardAtual();
 }
 
+function selecionarTerceiroCard() {
+    if (cardSelecionado == dadosCardControleDeBar)
+        return;
+
+    cardSelecionado = dadosCardControleDeBar;
+    carregarDadosCardAtual();
+}
+
 function abrirModalProjeto() {
     document.getElementById('portfolioModalLabel').textContent = cardSelecionado.titulo;
     document.getElementById('portfolioModalImage').src = cardSelecionado.gif;
@@ -91,6 +115,7 @@ function main() {
 
     btnPrimeiroCard.addEventListener('click', selecionarPrimeiroCard);
     btnSegundoCard.addEventListener('click', selecionarSegundoCard);
+    btnTerceiroCard.addEventListener('click', selecionarTerceiroCard);
     btnVerProjeto.addEventListener('click', abrirModalProjeto);
     selecionarPrimeiroCard();
 };
