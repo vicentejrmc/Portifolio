@@ -34,10 +34,10 @@ const dadosGestaoDeEquipamentos = {
     urlRepositorio: 'https://github.com/vicentejrmc/GestaoDeEquipamentos2025'
 }
 
-const dadosCardControleDeBar = {
+const dadosControleDeBar = {
     titulo: 'Controle de Bar',
     imagem: './imagens/controle-de-bar.png',
-    gif: 'https://imgur.com/baheGyf',
+    gif: 'https://i.imgur.com/baheGyf.gif',
     stack: [
         'https://skillicons.dev/icons?i=html&theme=light',
         'https://skillicons.dev/icons?i=css&theme=light',
@@ -45,8 +45,7 @@ const dadosCardControleDeBar = {
         'https://skillicons.dev/icons?i=cs&theme=light',
         'https://skillicons.dev/icons?i=bootstrap&theme=light'
     ],
-    descricao: 'O Sistema Controle de bar tem como objetivo de auxiliar de forma simples o gerenciamento do atendimento ao cliente. Com uma Inteface amigável e intuitiva, o sistema é ideal para estabelecimentos de pequeno porte. Por meio dele é possível realizar o Controle de vendas gerenciando os pedidos, Cadastro de produtos, Garsons e Mesas.'
-
+    descricao: 'O Sistema Controle de bar tem como objetivo de auxiliar de forma simples o gerenciamento do atendimento ao cliente. Com uma Inteface amigável e intuitiva, o sistema é ideal para estabelecimentos de pequeno porte. Por meio dele é possível realizar o Controle de vendas gerenciando os pedidos, Cadastro de produtos, Garsons e Mesas.',
     urlRepositorio: 'https://github.com/vicentejrmc/Controle-de-bar2025'
 }
 
@@ -95,10 +94,10 @@ function selecionarSegundoCard() {
 }
 
 function selecionarTerceiroCard() {
-    if (cardSelecionado == dadosCardControleDeBar)
+    if (cardSelecionado == dadosControleDeBar)
         return;
 
-    cardSelecionado = dadosCardControleDeBar;
+    cardSelecionado = dadosControleDeBar;
     carregarDadosCardAtual();
 }
 
@@ -110,6 +109,7 @@ function abrirModalProjeto() {
 function main() {
     const btnPrimeiroCard = document.getElementById("btnSelecionarPrimeiroCard");
     const btnSegundoCard = document.getElementById("btnSelecionarSegundoCard");
+    const btnTerceiroCard = document.getElementById("btnSelecionarTerceiroCard");
     const btnVerProjeto = document.getElementById("btnVerProjeto")
 
 
