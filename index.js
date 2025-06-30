@@ -36,7 +36,7 @@ const dadosGestaoDeEquipamentos = {
 
 const dadosControleDeBar = {
     titulo: 'Controle de Bar',
-    imagem: './imagens/controle-de-bar.png',
+    imagem: './imagens/Controle-de-bar.png',
     gif: 'https://i.imgur.com/baheGyf.gif',
     stack: [
         'https://skillicons.dev/icons?i=html&theme=light',
